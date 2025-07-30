@@ -17,6 +17,8 @@ spec:
       containers:
         - name: notification-service
           image: ammyy9908/notification-service:latest  # Replace with your actual image name
+          securityContext:
+            allowPrivilegeEscalation: false
           ports:
             - containerPort: 8080
           env:
